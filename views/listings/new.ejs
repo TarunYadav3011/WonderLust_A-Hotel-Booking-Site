@@ -3,7 +3,7 @@
     <div class="col-8 offset-2">
         <br>
         <h3>Create a new listing</h3>
-        <form method="POST" action="/listings"> 
+        <form method="POST" action="/listings" novalidate class="needs-validation"> 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input 
@@ -11,7 +11,9 @@
                     placeholder="Add a catchy title"  
                     type="text"
                     class="form-control" 
+                    required
                 />
+                <div class="valid-feedback">Titile Looks good!</div>
             </div>
             
             <div class="mb-3">
@@ -19,7 +21,10 @@
                 <textarea 
                     name="listing[description" 
                     class="form-control"
+                    required
                 ></textarea>
+                <div class="ivalid-feedback">Please enter a short description</div>
+
             </div>
 
             <div class="mb-3">
@@ -35,19 +40,21 @@
             <div class="row">
                     <div class="mb-3 col-md-4">
                         <label for="price" class="form-label">Price</label>
-                        <input name="listing[price]" placeholder="1200" type="number"  class="form-control">
-
+                        <input name="listing[price]" placeholder="1200" type="number"  class="form-control" required>
+                        <div class="ivalid-feedback">Price should be valid</div>
                     </div>
                     <div class="mb-3 col-md-8">
                         <label for="country" class="form-label">Country</label>
-                        <input name="listing[country]" placeholder="India " type="text" class="form-control"> 
+                        <input name="listing[country]" placeholder="India " type="text" class="form-control" required> 
+                        <div class="ivalid-feedback">Country name should be valid </div>
                     </div>
             
             </div>
             
             <div class="mb-3">
                 <label for="location" class="form-label">Location</label>
-                <input name="listing[location]" placeholder="Dwarka, Delhi" type="text" class="form-control">
+                <input name="listing[location]" placeholder="Dwarka, Delhi" type="text" class="form-control" required>
+                <div class="ivalid-feedback">Location should be valid </div>
 
             </div>
            
