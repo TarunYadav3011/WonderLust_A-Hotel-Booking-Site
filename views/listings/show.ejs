@@ -8,7 +8,7 @@
          </div>
 
         <div class="card col-6 offset-3 show-card">
-            <img src="<%= listing.image%>" class="card-img-top show-img" alt="listing_image">
+            <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
             <div class="card-body">
                 <p class="card-text">
                 
@@ -35,7 +35,7 @@
                 <hr/>
                 <h4>Leave a review</h4>
 
-                <form actions="/listings/<%= listing._id %>/reviews" method="POST">
+                <form action="/listings/<%= listing._id %>/reviews" method="POST">
                     <div class="mb-3 mt-3">
                         <label class="form-label" for="rating"></label>
                         <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range" >
@@ -48,5 +48,4 @@
                 </form>
             </div>
         </div>
-        
-
+    
